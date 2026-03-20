@@ -1,0 +1,7 @@
+Flask
+Flask-SQLAlchemy
+psycopg2-binary
+grpcio
+protobuf
+schedule
+prometheus_client

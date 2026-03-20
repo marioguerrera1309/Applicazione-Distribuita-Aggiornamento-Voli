@@ -1,0 +1,10 @@
+Flask
+Flask-SQLAlchemy
+psycopg2-binary
+grpcio
+protobuf
+requests
+sqlalchemy
+schedule
+confluent-kafka
+prometheus_client

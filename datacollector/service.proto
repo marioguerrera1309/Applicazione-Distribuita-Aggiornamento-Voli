@@ -1,0 +1,18 @@
+syntax = "proto3";
+//messaggio del DataCollector allo UserManager
+message UserVerification {
+  string email = 1;
+}
+//messaggio di risposta
+enum UserStatus {
+  UNKNOWN = 0;
+  ACTIVE = 1; //Utente presente
+  DELETED = 2; //Utente in soft-delete
+  NOT_FOUND = 3; //Utente non trovato
+}
+message Response {
+  UserStatus status = 1;
+}
+service UserManagerService {
+  rpc CheckUserStatus (UserVerification) returns (Response); //Verifica stato utente
+}
